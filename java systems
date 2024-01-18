@@ -1,0 +1,142 @@
+JAVA BASIC CALCULATOR
+
+import java.util.*;
+
+public class BasicCalculator{
+
+	public static void main(String [] args){
+	Scanner scanner= new Scanner(System.in);
+
+
+	//user input
+	System.out.println("Enter first no.: ");
+	double no1 = scanner.nextDouble();
+
+	System.out.println("Enter two no.: ");
+	double no2 = scanner.nextDouble();
+	
+	System.out.println("Choose operation(*,/,+,-): ");
+	String ops = scanner.next();
+
+	//Switch case
+
+	switch (ops) {
+		case "*":
+		System.out.println("Result: " + (no1 * no2));
+		break;
+	
+		case "+":
+		System.out.println("Result: " + (no1 + no2));
+		break;
+	
+		case "-":
+		System.out.println("Result: " + (no1 - no2));
+		break;
+
+		case "/":
+		if(no2 !=0){
+		System.out.println("Result: " + (no1 / no2));
+		}
+		else{
+		System.out.println("Syntax error");
+		}
+		break;
+		default:
+		System.out.println("Please enter an operation. ");
+	}
+
+	scanner.close();
+
+	}
+
+}
+
+
+
+
+
+JAVA GRADING SYSTEM
+
+
+import java.util.Scanner;
+public class Score{
+
+	public static void main(String[] args){
+	Scanner scanner = new Scanner(System.in);
+
+	//user input prompt
+
+	System.out.println("Input score(1-100):");
+	int score = scanner.nextInt();
+
+	//grade classification
+	if(score>=90 && score <=100){
+	System.out.println("A");
+	} else if(score>=70 && score<80){
+	System.out.println("A-");
+	}else if(score>=60 && score<70){
+	System.out.println("B+");
+	}else if(score>=50 && score<60){
+	System.out.println("B-");
+	}else if(score>=0 && score<50){
+	System.out.println("F");
+	}else{
+	System.out.println("Invalid input");
+	}
+	
+	scanner.close();
+	
+	
+	
+	}
+
+}
+
+
+
+
+
+
+
+
+JAVA TRAFFIC LIGHT SYSTEM
+
+
+
+
+
+import java.util.Scanner;
+
+public class Traffic {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        try {
+            // Prompt user input
+            System.out.println("Enter a color (Red, Yellow, Green):");
+            String color = scanner.nextLine().trim().toLowerCase();
+
+            // Switch statement to determine the action based on the entered color
+            switch (color) {
+                case "red":
+                    System.out.println("Stop");
+                    break;
+
+                case "yellow":
+                    System.out.println("Get ready");
+                    break;
+
+                case "green":
+                    System.out.println("Go");
+                    break;
+
+                default:
+                    System.out.println("Please choose a valid color (Red, Yellow, Green)");
+            }
+        } finally {
+            // Close the scanner in a finally block to ensure it's always closed
+            scanner.close();
+        }
+    }
+}
